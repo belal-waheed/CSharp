@@ -153,6 +153,25 @@ namespace CSharp
             */
             #endregion
 
+            #region Q10
+            //10. Write a method PrintFirstBook() that prints the first book in the books array. If the array
+            //is empty, use return to exit the method early instead of printing anything.
+            /*
+            
+            static void PrintFirstBook(string[] books)
+            {
+                if (books.Length == 0)
+                {
+                    return;
+                }
+                Console.WriteLine(books[0]);
+            }
+            string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+            PrintFirstBook(books);
+          
+             */
+            #endregion
+
         }
     }
 }
