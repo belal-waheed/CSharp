@@ -24,10 +24,38 @@ shelf 1 has 1, 4 copies. Print the number of copies on shelf 1, slot 0.
             int[,] shelfCopies = { { 3, 5 }, { 1, 4 } };
             Console.WriteLine(shelfCopies[1, 0]);
              */
-            
-            #endregion
-            
 
+            #endregion
+            #region Q3
+            /*
+             Write a method called PrintWelcomeMessage that takes no parameters and prints
+"Welcome to the Library!". Call it from Main.
+             */
+            
+            /*
+            void PrintWelcomeMessage()
+            {
+                Console.WriteLine("Welcome to the Library!");
+            }
+            PrintWelcomeMessage();
+            */
+
+            #endregion
+
+            #region Q4
+            /*
+             Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
+"Clean Code".
+             */
+           
+            /*
+            void PrintBookTitle(string title)
+            {
+                Console.WriteLine("Book title: " + title);
+            }
+            PrintBookTitle("Clean Code");
+            */
+            #endregion
         }
     }
 }
