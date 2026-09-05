@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="CSharp.csproj" />
+  <Project Path="Assignment03/Assignment03.csproj" />
+  <Project Path="Assignment04/Assignment04.csproj" />
 </Solution>
