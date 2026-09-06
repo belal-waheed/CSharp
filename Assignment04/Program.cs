@@ -31,7 +31,7 @@ shelf 1 has 1, 4 copies. Print the number of copies on shelf 1, slot 0.
              Write a method called PrintWelcomeMessage that takes no parameters and prints
 "Welcome to the Library!". Call it from Main.
              */
-            
+
             /*
             void PrintWelcomeMessage()
             {
@@ -47,7 +47,7 @@ shelf 1 has 1, 4 copies. Print the number of copies on shelf 1, slot 0.
              Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
 "Clean Code".
              */
-           
+
             /*
             void PrintBookTitle(string title)
             {
@@ -56,6 +56,46 @@ shelf 1 has 1, 4 copies. Print the number of copies on shelf 1, slot 0.
             PrintBookTitle("Clean Code");
             */
             #endregion
+
+            #region Q5
+            /*
+             Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+int pages = 400; and print pages afterward. What do you expect to see, and why?
+             */
+            //static void AddBonusPages(int pages)
+            //{
+            //    pages += 50;
+            //}
+            //int pages = 400;
+
+            //AddBonusPages(pages);
+
+            //Console.WriteLine(pages);   // Output: 400
+
+            #endregion
+
+
+            #region Q6
+            /*
+             Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
+with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward. What do you expect to
+see, and why?
+             */
+
+            //static void ApplyDiscount(double[] prices)
+            //{
+            //    prices[0] -= 5;
+            //}
+            //double[] prices = { 25.5, 40.0 };
+
+            //ApplyDiscount(prices);
+
+            //Console.WriteLine(prices[0]);
+            // Output: 20.5
+            #endregion
+
+
+
         }
     }
 }
