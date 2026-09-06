@@ -165,7 +165,37 @@ it once with only a title, and once passing both a title and pages.
             //PrintBookInfo("The Pragmatic Programmer", 352); // Output: Title: The Pragmatic Programmer, Pages: 352
             #endregion
 
+            #region 11
+            /*
+             Using the PrintBookInfo method from the question above, call it by naming the
+parameters, passing pages before title.
+             */
+            //static void PrintBookInfo(string title, int pages = 300)
+            //{
+            //    Console.WriteLine($"Title: {title}, Pages: {pages}");
+            //}
 
+            //PrintBookInfo(pages: 500, title: "Design Patterns"); // Output: Title: Design Patterns, Pages: 500
+            #endregion
+            #region 12
+            /*
+             Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.
+Call it with three book titles
+             */
+            static void PrintAllTitles(params string[] titles)
+            {
+                foreach (string title in titles)
+                {
+                    Console.WriteLine(title);
+                }
+            }
+            PrintAllTitles(
+            "Clean Code",
+            "The Pragmatic Programmer",
+            "Design Patterns"
+           );
+
+            #endregion
         }
     }
 }
