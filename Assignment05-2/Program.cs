@@ -1,4 +1,7 @@
-﻿namespace Assignment05_2
+﻿using Microsoft.VisualBasic;
+using System.Drawing;
+
+namespace Assignment05_2
 {
     internal class Program
     {
@@ -66,6 +69,40 @@
             //int genreNumber = 1;
             //Genre genre = (Genre)genreNumber;
             //Console.WriteLine($"Casted value: {genre}");
+
+            #endregion
+
+            #region 7
+            //Given Genre genre = Genre.Fiction;, convert it into a string using ToString() and print it.
+
+            //Genre genre = Genre.Fiction;
+            //string genreString = genre.ToString();
+            //Console.WriteLine(genreString);
+
+            #endregion
+
+            #region 8
+            //Given string genreText = "Science";, convert it into a Genre value using Enum.Parse() and print the result.
+
+            //string genreText = "Science";
+            //Genre parsedGenre = Enum.Parse<Genre>(genreText);
+            //Console.WriteLine(parsedGenre);
+
+            #endregion
+
+            #region 9
+            //Given string genreText = "Mystery"; (not a valid Genre value), use Enum.TryParse() to 
+            //attempt the conversion.Print "Unknown genre" if it fails.
+
+            string genreText = "Mystery";
+            if (Enum.TryParse<Genre>(genreText, out Genre result))
+            {
+                Console.WriteLine(result);
+            }
+            else
+            {
+                Console.WriteLine("Unknown genre");
+            }
 
             #endregion
         }
