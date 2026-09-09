@@ -1,4 +1,6 @@
 <Solution>
   <Project Path="Assignment03/Assignment03.csproj" />
   <Project Path="Assignment04/Assignment04.csproj" />
+  <Project Path="Assignment05-2/Assignment05-2.csproj" Id="0d8778c2-0154-4e63-874a-c792dbd9dc6d" />
+  <Project Path="gym/gym.csproj" Id="29ee3840-3d6a-46cb-9330-66129ddf4b5c" />
 </Solution>
