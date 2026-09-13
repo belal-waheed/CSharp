@@ -58,6 +58,65 @@ Properties can also include validation and other logic before allowing values to
             Console.WriteLine(fullAddress.GetFullAddress());
             */
             #endregion
-        }
+            DeliveryCenter center = new DeliveryCenter();
+
+            // Shipment 1
+            Console.WriteLine("Enter Shipment 1 Data");
+
+            Console.Write("Tracking Code: ");
+            string code1 = Console.ReadLine();
+
+            Console.Write("Description: ");
+            string description1 = Console.ReadLine();
+
+            Console.Write("Weight: ");
+            double weight1 = double.Parse(Console.ReadLine());
+
+            Console.Write("Delivery Fee: ");
+            decimal fee1 = decimal.Parse(Console.ReadLine());
+
+            Console.Write("City: ");
+            string city1 = Console.ReadLine();
+
+            Console.Write("Street: ");
+            string street1 = Console.ReadLine();
+
+            Console.Write("Building Number: ");
+            int building1 = int.Parse(Console.ReadLine());
+
+            DeliveryAddress address1 = new DeliveryAddress(city1, street1, building1);
+
+            Shipment shipment1 = new Shipment(code1, description1, weight1, fee1, address1);
+
+            if (center.AddShipment(shipment1))
+                Console.WriteLine("Shipment added successfully.");
+
+           
+            
+
+            // Print Shipments
+            Console.WriteLine("\n - All Shipments");
+
+            center[0].PrintShipment();
+            Console.WriteLine();
+
+          
+
+            // Search
+            Console.Write("\nEnter a tracking code to search: ");
+            string searchCode = Console.ReadLine();
+
+            Shipment found = center[searchCode];
+
+            if (!string.IsNullOrEmpty(found.TrackingCode))
+            {
+                Console.WriteLine($"Shipment found: {found.TrackingCode} - {found.Description}");
+            }
+            else
+            {
+                Console.WriteLine("Shipment not found.");
+            }
+
+         }
     }
 }
