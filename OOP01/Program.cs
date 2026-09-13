@@ -46,6 +46,18 @@ Private fields hide the internal data, while public properties provide controlle
 Properties can also include validation and other logic before allowing values to be changed.
              */
             #endregion
+
+            #region part02-1
+            /*
+            DeliveryAddress deliveryAddress = new DeliveryAddress("New York", "Main Street", 123);
+            DeliveryAddress fullAddress = deliveryAddress;
+            fullAddress.City = "Los Angeles";
+            Console.WriteLine("original the same");
+            Console.WriteLine(deliveryAddress.GetFullAddress());
+            Console.WriteLine("modified");
+            Console.WriteLine(fullAddress.GetFullAddress());
+            */
+            #endregion
         }
     }
 }
