@@ -104,6 +104,19 @@ namespace OOP02
             // Print all shipments
             center.PrintAllShipments();
 
+            // Search for a shipment using tracking code indexer
+            Console.WriteLine("\nEnter Tracking Code to Search:");
+            string searchCode = ReadString();
+            Shipment? found = center[searchCode];
+            if (found != null)
+            {
+                Console.WriteLine($"Shipment Found: {found.TrackingCode} - {found.Description}");
+            }
+            else
+            {
+                Console.WriteLine("Shipment Not Found.");
+            }
+
             // Remove one shipment using tracking code
             Console.WriteLine("\nEnter Tracking Code to Remove:");
             string codeToRemove = ReadString();

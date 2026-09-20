@@ -20,6 +20,46 @@ namespace OOP02
             count = 0;
         }
 
+        public Shipment? this[int index]
+        {
+            get
+            {
+                if (index >= 0 && index < count)
+                {
+                    return shipments[index];
+                }
+                return null;
+            }
+            set
+            {
+                if (index >= 0 && index < count)
+                {
+                    shipments[index] = value;
+                }
+            }
+        }
+
+        public Shipment? this[string trackingCode]
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(trackingCode))
+                {
+                    return null;
+                }
+
+                for (int i = 0; i < count; i++)
+                {
+                    if (shipments[i]?.TrackingCode == trackingCode)
+                    {
+                        return shipments[i];
+                    }
+                }
+
+                return null;
+            }
+        }
+
         public bool AddShipment(Shipment shipment)
         {
             if (shipment == null || count >= shipments.Length)
