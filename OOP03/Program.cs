@@ -39,8 +39,12 @@ namespace OOP03
             center.AddShipment(std);
             center.AddShipment(exp);
             center.AddShipment(intl);
-
+            // Print All Shipments
             center.PrintAllShipments();
+
+            // Using Indexers (by int index and by string tracking code)
+            Shipment? firstShipment = center[0];
+            Shipment? foundShipment = center["SH001"];
 
             Console.WriteLine("\nPrinting Using DeliveryHelper...\n");
             DeliveryHelper.PrintShipmentDetails(std);
