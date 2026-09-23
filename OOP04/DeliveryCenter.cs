@@ -1,3 +1,5 @@
+using OOP04;
+
 namespace OOP03
 {
     public class DeliveryCenter
@@ -122,6 +124,19 @@ namespace OOP03
                 Console.WriteLine("------------------------------------------\n");
                 shipments[i]?.PrintShipment();
                 Console.WriteLine();
+            }
+            Console.WriteLine("==========================================");
+        }
+
+        public void PrintTrackingStatuses()
+        {
+            Console.WriteLine("Tracking Status");
+            for (int i = 0; i < count; i++)
+            {
+                if (shipments[i] is ITrackable trackable)
+                {
+                    Console.WriteLine(trackable.GetTrackingStatus());
+                }
             }
             Console.WriteLine("==========================================");
         }
