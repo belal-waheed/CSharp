@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP03;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,11 +12,19 @@ namespace OOP04
             if (shipment == null) return;
             Console.WriteLine(shipment.GetTrackingStatus());
         }
-
         public static void PrintInsurance(IInsurable shipment)
         {
             if (shipment == null) return;
-            Console.WriteLine($"Insurance : {shipment.CalculateInsurance():0.00} EGP");
+
+            string label = shipment switch
+            {
+                StandardShipment => "Standard Shipment",
+                ExpressShipment => "Express Shipment",
+                InternationalShipment => "International Shipment",
+                _ => "Shipment"
+            };
+
+            Console.WriteLine($"{label} Insurance : {shipment.CalculateInsurance():0.00} EGP");
         }
     }
 }

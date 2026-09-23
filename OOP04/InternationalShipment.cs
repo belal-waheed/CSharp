@@ -45,14 +45,10 @@ namespace OOP03
 
         public override void PrintShipment()
         {
-            Console.WriteLine($"Tracking Code: {TrackingCode}");
-            Console.WriteLine($"Description: {Description}");
-            Console.WriteLine($"Weight: {Weight} KG");
-            Console.WriteLine($"Delivery Fee: {DeliveryFee} EGP");
-            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
-            Console.WriteLine($"Destination Country: {DestinationCountry}");
-            Console.WriteLine($"Customs Fee: {CustomsFee} EGP");
-            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
+            Console.WriteLine("International Shipment");
+            Console.WriteLine($"Tracking Code : {TrackingCode}");
+            Console.WriteLine($"Destination Country : {DestinationCountry}");
+            Console.WriteLine($"Estimated Cost : {EstimatedCost} EGP");
         }
 
         public virtual void GenerateCustomsReport()

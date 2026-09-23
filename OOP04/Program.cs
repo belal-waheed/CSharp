@@ -1,4 +1,6 @@
-﻿namespace OOP04
+﻿using OOP03;
+
+namespace OOP04
 {
     internal class Program
     {
@@ -28,6 +30,39 @@
             //No, a class cannot inherit from multiple classes.
 
             //Yes, a class can implement multiple interfaces.
+            #endregion
+            #region part02
+            Driver driver = new Driver("Ahmed Mohamed");
+            DeliveryCenter center = new DeliveryCenter("Delivery Center");
+            center.Driver = driver;
+
+            StandardShipment std = new StandardShipment("SH001", "Laptop-hola", 3m, 80m, new DeliveryAddress("Cairo", "Main St", 10));
+            ExpressShipment exp = new ExpressShipment("SH002", "Phone-hola", 2m, 60m, new DeliveryAddress("wilez", "Nile St", 5), 30m);
+            InternationalShipment intl = new InternationalShipment("SH003", "Television-hola", 8m, 120m, new DeliveryAddress("SAR", "Alexanderplatz", 1), "Germany", 100m);
+
+            center.AddShipment(std);
+            center.AddShipment(exp);
+            center.AddShipment(intl);
+
+            center.PrintAllShipments();
+            Console.WriteLine("Tracking Status");
+            ITrackable[] trackables = new ITrackable[] { std, exp, intl };
+            foreach (ITrackable t in trackables)
+            {
+                DeliveryReport.PrintShipment(t);
+            }
+            Console.WriteLine("====================<-hola->======================");
+
+            // g & i - build an IInsurable[] array and print each shipment's insurance through it
+            Console.WriteLine("Insurance");
+            IInsurable[] insurables = new IInsurable[] { std, exp, intl };
+            foreach (IInsurable ins in insurables)
+            {
+                DeliveryReport.PrintInsurance(ins);
+            }
+            Console.WriteLine("====================<-hola->======================");
+
+            Console.WriteLine("done.");
             #endregion
         }
     }
