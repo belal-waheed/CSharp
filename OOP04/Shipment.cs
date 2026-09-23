@@ -1,6 +1,6 @@
 namespace OOP03
 {
-    public  class Shipment
+    public abstract class Shipment
     {
         private string trackingCode;
         private string description;
@@ -41,7 +41,7 @@ namespace OOP03
 
         public DeliveryAddress Destination { get; set; }
 
-        public virtual decimal EstimatedCost => DeliveryFee + (Weight * 5m);
+        public abstract decimal EstimatedCost { get; }
 
         public Shipment(string trackingCode)
             : this(trackingCode, "Unknown", 1m, 50m, new DeliveryAddress("Unknown", "Unknown", 0))
@@ -65,15 +65,8 @@ namespace OOP03
             }
         }
 
-        public virtual void PrintShipment()
-        {
-            Console.WriteLine($"Tracking Code: {TrackingCode}");
-            Console.WriteLine($"Description: {Description}");
-            Console.WriteLine($"Weight: {Weight} KG");
-            Console.WriteLine($"Delivery Fee: {DeliveryFee} EGP");
-            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
-            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
-        }
+        public abstract void PrintShipment();
+
 
         public void UpdateWeight(decimal newWeight)
         {
@@ -90,5 +83,7 @@ namespace OOP03
                 weight = newWeight + packingWeight;
             }
         }
+
+
     }
 }
