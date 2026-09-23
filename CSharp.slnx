@@ -6,4 +6,6 @@
   <Project Path="OOP01/OOP01.csproj" Id="b79b0ec5-098d-4363-8370-f876816ae209" />
   <Project Path="OOP02/OOP02.csproj" Id="d8178f2e-d180-448c-a821-b9fd6e6bc3af" />
   <Project Path="OOP03/OOP03.csproj" Id="39ecf315-898a-4594-af6c-cac80e922f9d" />
+  <Project Path="OOP04/OOP04.csproj" Id="cfe0f291-3d85-4249-b881-01cfc6032e2b" />
+  <Project Path="Task04/Task04.csproj" Id="a03c6cbe-7483-4792-9632-18276980dcf1" />
 </Solution>
