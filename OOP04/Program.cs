@@ -29,5 +29,6 @@
 
             //Yes, a class can implement multiple interfaces.
             #endregion
+        }
     }
 }
