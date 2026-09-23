@@ -2,7 +2,7 @@ using OOP04;
 
 namespace OOP03
 {
-    public class ExpressShipment : Shipment, ITrackable
+    public class ExpressShipment : Shipment, ITrackable, IInsurable
     {
         private decimal extraFee;
 
@@ -42,6 +42,7 @@ namespace OOP03
         }
 
         public string GetTrackingStatus() => $"Shipment {TrackingCode} is Out for Delivery.";
+        public decimal CalculateInsurance() => EstimatedCost * 0.08m;
 
     }
 }

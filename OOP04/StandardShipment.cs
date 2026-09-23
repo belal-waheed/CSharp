@@ -2,7 +2,7 @@ using OOP04;
 
 namespace OOP03
 {
-    public class StandardShipment : Shipment, ITrackable
+    public class StandardShipment : Shipment, ITrackable, IInsurable
     {
         public StandardShipment(string trackingCode)
             : base(trackingCode)
@@ -28,5 +28,7 @@ namespace OOP03
         }
 
         public string GetTrackingStatus() => $"Shipment {TrackingCode} is Ready.";
+        public decimal CalculateInsurance() => EstimatedCost * 0.05m;
+
     }
 }
