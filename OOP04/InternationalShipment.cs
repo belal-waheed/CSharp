@@ -1,6 +1,8 @@
+using OOP04;
+
 namespace OOP03
 {
-    public class InternationalShipment : Shipment
+    public class InternationalShipment : Shipment, ITrackable
     {
         private string destinationCountry = "Unknown";
         private decimal customsFee;
@@ -60,5 +62,6 @@ namespace OOP03
             Console.WriteLine($"Destination Country: {DestinationCountry}");
             Console.WriteLine($"Customs Fee: {CustomsFee} EGP");
         }
+        public string GetTrackingStatus() => $"Shipment {TrackingCode} has been Delivered.";
     }
 }

@@ -1,6 +1,8 @@
+using OOP04;
+
 namespace OOP03
 {
-    public class ExpressShipment : Shipment
+    public class ExpressShipment : Shipment, ITrackable
     {
         private decimal extraFee;
 
@@ -38,5 +40,8 @@ namespace OOP03
             Console.WriteLine($"Extra Fee: {ExtraFee} EGP");
             Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
         }
+
+        public string GetTrackingStatus() => $"Shipment {TrackingCode} is Out for Delivery.";
+
     }
 }

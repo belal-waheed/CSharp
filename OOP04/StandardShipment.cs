@@ -1,6 +1,8 @@
+using OOP04;
+
 namespace OOP03
 {
-    public class StandardShipment : Shipment
+    public class StandardShipment : Shipment, ITrackable
     {
         public StandardShipment(string trackingCode)
             : base(trackingCode)
@@ -24,5 +26,7 @@ namespace OOP03
             Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
             Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
         }
+
+        public string GetTrackingStatus() => $"Shipment {TrackingCode} is Ready.";
     }
 }
