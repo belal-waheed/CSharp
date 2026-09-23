@@ -11,5 +11,15 @@ namespace OOP03
             : base(trackingCode, description, weight, deliveryFee, destination)
         {
         }
+        public override decimal EstimatedCost => DeliveryFee + (Weight * 5m);
+
+        public override void PrintShipment()
+        {
+            Console.WriteLine("Completed Shipment");
+            Console.WriteLine($"Tracking Code: {TrackingCode}");
+            Console.WriteLine($"Description: {Description}");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
+            Console.WriteLine("Status: Completed");
+        }
     }
 }
